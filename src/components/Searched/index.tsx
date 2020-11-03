@@ -9,20 +9,20 @@ interface Props {
 }
 
 const Searched: React.FC<Props> = ({ pokemon, error }) => {
-  console.log({pokemon, error})
+  console.log({ pokemon, error })
   if (error) {
     let err: string = error + ''
     let response = null
     let isNotFound = err.indexOf('404') > -1
 
     isNotFound
-      ? response = <h3>{`Pokémon not found `}</h3>
-      : response = <h3>{`Error trying to search servidor data. ` + error}</h3>
+      ? (response = <h3>{`Pokémon not found `}</h3>)
+      : (response = <h3>{`Error trying to search servidor data. ` + error}</h3>)
 
     return response
   }
 
-  if ( pokemon === null ) {
+  if (pokemon === null) {
     return <h3>Carregando...</h3>
   }
 

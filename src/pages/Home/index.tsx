@@ -15,8 +15,8 @@ import { IPokemon } from '../../components/Card/interfaces/pokemon'
 const Home: React.FC = () => {
   const [typedText, setTypedText] = useState('')
   const [fixSearchBar, setFixSearchBar] = useState(false)
-  const lastScrollY = useRef(0);
-  const isSearching = useRef(false);
+  const lastScrollY = useRef(0)
+  const isSearching = useRef(false)
 
   const [callListRequest, resultList] = api<IPokemonList>({ method: 'get' })
   const [callSearchRequest, resultSearch, clearResults] = api<IPokemon>({
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
     debounced: true,
   })
 
-  useEffect(() => {    
+  useEffect(() => {
     fetchData(typedText)
   }, [typedText])
 
@@ -43,11 +43,9 @@ const Home: React.FC = () => {
   }, [lastScrollY])
 
   const fetchData = useCallback((text) => {
-    console.log(isSearching.current);
-    isSearching.current 
-      ? callSearchRequest({ url: '/pokemon/' + text }) 
-      : callListRequest({ url: '/pokemon/' })
-  },[])
+    console.log(isSearching.current)
+    isSearching.current ? callSearchRequest({ url: '/pokemon/' + text }) : callListRequest({ url: '/pokemon/' })
+  }, [])
 
   const fetchMore = useCallback(() => {
     const url = resultList?.data?.next
@@ -60,29 +58,25 @@ const Home: React.FC = () => {
         return { ...newRequestInfo }
       },
     })
-  },[resultList])
+  }, [resultList])
 
   const handleChange = useCallback((ev: React.ChangeEvent<HTMLInputElement>) => {
     const text = ev.target.value.trim()
 
-    isSearching.current = (text !== '')
+    isSearching.current = text !== ''
     !isSearching.current && clearResults()
 
     setTypedText(text)
-  },[])
+  }, [])
 
-  return (    
+  return (
     <Container>
       <SearchBar handleChange={handleChange} typedText={typedText} fixBar={fixSearchBar} />
 
       <Content searching={isSearching.current}>
-        {isSearching.current && resultSearch && (
-          <Searched pokemon={resultSearch?.data} error={resultSearch?.error} />
-        )}
+        {isSearching.current && resultSearch && <Searched pokemon={resultSearch?.data} error={resultSearch?.error} />}
 
-        {!isSearching.current && resultList && (
-          <PokemonList pokemons={resultList?.data} error={resultList?.error} />
-        )}
+        {!isSearching.current && resultList && <PokemonList pokemons={resultList?.data} error={resultList?.error} />}
 
         {resultList?.data?.results && !isSearching.current && resultList?.data?.next && (
           <InfiniteScroll fetchMore={fetchMore}>

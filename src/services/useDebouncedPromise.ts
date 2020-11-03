@@ -4,8 +4,8 @@ import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 export default function useDebouncedPromise(fn: AxiosInstance, delay: number) {
   let timoutRef = useRef(0)
 
-  function handler<T>(params: AxiosRequestConfig) :Promise< AxiosResponse<T> > {
-    return new Promise< AxiosResponse<T> >((resolve, reject) => {
+  function handler<T>(params: AxiosRequestConfig): Promise<AxiosResponse<T>> {
+    return new Promise<AxiosResponse<T>>((resolve, reject) => {
       if (timoutRef.current) {
         clearTimeout(timoutRef.current!)
       }

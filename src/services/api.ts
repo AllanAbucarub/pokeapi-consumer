@@ -9,20 +9,19 @@ interface Config extends AxiosRequestConfig {
 }
 
 type RequestType<T> = {
-  error: string,
+  error: string
   data: T | null
 }
 
 export default function useApi<T>(
   config: Config
 ): [(par: Config) => void, { error: string; data: T | null } | null, () => void] {
-
   const initialRequestInfo: RequestType<T> = {
     error: '',
     data: null,
   }
 
-  const [requestInfo, setRequestInfo] = useState<RequestType<T>>( initialRequestInfo )
+  const [requestInfo, setRequestInfo] = useState<RequestType<T>>(initialRequestInfo)
   const debouncedAxios = useDebouncedPromise(axios, config.debouncedDelay || 0)
 
   async function call(localConfig: Config) {
@@ -46,7 +45,7 @@ export default function useApi<T>(
 
       finalConfig.updateRequestInfo && setRequestInfo(finalConfig.updateRequestInfo(newRequestInfo, requestInfo))
     } catch (error) {
-      console.log(error);
+      console.log(error)
       finalConfig.updateRequestInfo &&
         setRequestInfo(
           finalConfig.updateRequestInfo(
@@ -60,8 +59,8 @@ export default function useApi<T>(
     }
   }
 
-  function clearResults() :void {
-    setRequestInfo( initialRequestInfo ) ;
+  function clearResults(): void {
+    setRequestInfo(initialRequestInfo)
   }
 
   return [call, requestInfo, clearResults]

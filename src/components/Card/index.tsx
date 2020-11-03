@@ -19,8 +19,8 @@ const Card: React.FC<Props> = React.memo(({ url }) => {
     url: url,
     method: 'get',
   })
-  const isLoading = useRef(false);
-  const img = useRef<string | undefined>('');
+  const isLoading = useRef(false)
+  const img = useRef<string | undefined>('')
 
   isLoading.current = !resultData?.data
 

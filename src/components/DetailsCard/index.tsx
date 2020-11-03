@@ -43,8 +43,8 @@ const DetailsCard: React.FC<IPokemon> = (pokemonDetails) => {
   const maxPoints = useRef(0)
 
   img.current = pokemonDetails.sprites.other.dream_world.front_default
-  ? pokemonDetails.sprites.other.dream_world.front_default
-  : pokemonDetails.sprites.other['official-artwork'].front_default
+    ? pokemonDetails.sprites.other.dream_world.front_default
+    : pokemonDetails.sprites.other['official-artwork'].front_default
 
   if (!img.current) {
     img.current = noImage
@@ -56,7 +56,6 @@ const DetailsCard: React.FC<IPokemon> = (pokemonDetails) => {
       return Math.max(a, b)
     }, 100)
 
-    
   useEffect(() => {
     setStats(
       // retorna apenas os status desejados

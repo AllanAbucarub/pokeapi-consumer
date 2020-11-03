@@ -28,22 +28,22 @@ const FamilyTree: React.FC<Props> = ({ id }) => {
 
   const getEvolves = useCallback((chain: IChain, ev: Array<Number>) => {
     chain?.species && ev.push(getIdFromUrl(chain?.species?.url))
-  
+
     //console.log(chain?.evolves_to)
     if (chain?.evolves_to?.length) {
       const nextChain: IChain = chain.evolves_to[0]
       console.log(nextChain)
       getEvolves(nextChain, ev)
     }
-  },[])
-  
+  }, [])
+
   const getIdFromUrl = useCallback((url: string) => {
     if (url) {
       var splitedUrl = url?.split('/')
       return parseInt(splitedUrl[splitedUrl.length - 2])
     }
     return 0
-  },[])
+  }, [])
 
   useEffect(() => {
     if (evolutionId?.data) {
