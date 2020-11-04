@@ -60,7 +60,7 @@ const Home: React.FC = () => {
   }, [resultList])
 
   const handleChange = useCallback((ev: React.ChangeEvent<HTMLInputElement>) => {
-    const text = ev.target.value.trim()
+    const text = ev.target.value.trim().toLowerCase()
 
     isSearching.current = text !== ''
     !isSearching.current && clearResults()
