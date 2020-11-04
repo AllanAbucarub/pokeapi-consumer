@@ -8,8 +8,6 @@ Esta é uma aplicação que consome alguns dados da api [pokeapi.co](https://pok
 - [x] Busca de um Pokémon em específico
 - [x] Página de detalhes de um Pokémon e suas evoluções
 
-![Heroku](https://heroku-badge.herokuapp.com/?app=pokeapi-consumer)
-
 ## :memo: Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
@@ -48,3 +46,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+
+## :cloud: Demonstração da aplicação
+
+![Heroku](https://heroku-badge.herokuapp.com/?app=pokeapi-consumer) 
+[pokeapi-consumer](https://pokeapi-consumer.herokuapp.com/)
+
