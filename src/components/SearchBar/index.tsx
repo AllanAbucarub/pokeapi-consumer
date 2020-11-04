@@ -11,7 +11,6 @@ interface Props {
 
 const SearchBar: React.FC<Props> = React.memo(({ handleChange, typedText, fixBar }) => (
   <Container fixBar={fixBar}>
-    {console.log('search bar - - - - ')}
     <Search>
       <img src={SearchIcon} alt="Ícone de busca" />
 

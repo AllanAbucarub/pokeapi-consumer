@@ -44,7 +44,6 @@ const Card: React.FC<Props> = React.memo(({ url }) => {
         state: { state: resultData },
       }}
     >
-      {console.log('CARD > > > >')}
       <Container>
         <PokeId># {resultData?.data?.id}</PokeId>
         {isLoading.current ? <Loading /> : <img src={img.current} alt="Pokémon" />}

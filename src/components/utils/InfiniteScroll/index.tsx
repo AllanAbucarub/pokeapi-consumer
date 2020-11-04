@@ -33,7 +33,6 @@ const InfiniteScroll: React.FC<Props> = ({ fetchMore, children }) => {
     }
   }, [fetchMore])
 
-  console.log('inf sc - - ')
   return <Container ref={containerRef}>{children}</Container>
 }
 

@@ -43,7 +43,6 @@ const Home: React.FC = () => {
   }, [lastScrollY])
 
   const fetchData = useCallback((text) => {
-    console.log(isSearching.current)
     isSearching.current ? callSearchRequest({ url: '/pokemon/' + text }) : callListRequest({ url: '/pokemon/' })
   }, [])
 

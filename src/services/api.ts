@@ -45,7 +45,6 @@ export default function useApi<T>(
 
       finalConfig.updateRequestInfo && setRequestInfo(finalConfig.updateRequestInfo(newRequestInfo, requestInfo))
     } catch (error) {
-      console.log(error)
       finalConfig.updateRequestInfo &&
         setRequestInfo(
           finalConfig.updateRequestInfo(

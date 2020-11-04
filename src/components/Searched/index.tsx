@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Searched: React.FC<Props> = ({ pokemon, error }) => {
-  console.log({ pokemon, error })
+  
   if (error) {
     let err: string = error + ''
     let response = null

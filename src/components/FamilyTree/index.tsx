@@ -29,10 +29,8 @@ const FamilyTree: React.FC<Props> = ({ id }) => {
   const getEvolves = useCallback((chain: IChain, ev: Array<Number>) => {
     chain?.species && ev.push(getIdFromUrl(chain?.species?.url))
 
-    //console.log(chain?.evolves_to)
     if (chain?.evolves_to?.length) {
       const nextChain: IChain = chain.evolves_to[0]
-      console.log(nextChain)
       getEvolves(nextChain, ev)
     }
   }, [])
