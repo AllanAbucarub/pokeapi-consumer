@@ -2,7 +2,7 @@
 
 Esta é uma aplicação que consome alguns dados da api [pokeapi.co](https://pokeapi.co/) e os apresenta em um interface criada em [React](https://pt-br.reactjs.org/).
 
-## Funcionalidades
+## :gear: Funcionalidades
 
 - [x] Listagem dos Pokémons
 - [x] Busca de um Pokémon em específico
@@ -21,7 +21,7 @@ No caso de optar pelo Npm, não se preocupe, pois ele já é instalado juntament
 
 Se preferir o Yarn, que é um gerenciador de pacotes desenvolvido pelo Facebook, pode baixa-lo por [aqui](https://classic.yarnpkg.com/en/docs/install).
 
-## Instalação
+## :package: Instalação
 
 ##### Clone este repositório
 ```
@@ -42,7 +42,7 @@ $ npm install ou yarn install
 $ npm start ou yarn start
 ```
 
-## 🛠 Tecnologias
+## :computer: Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
