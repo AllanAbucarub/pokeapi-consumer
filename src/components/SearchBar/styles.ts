@@ -9,13 +9,13 @@ export const Container = styled.div<FixedBar>`
   align-items: center;
   justify-content: center;
   height: 76px;
-  width: 100%;
   background: rgba(49, 46, 56, 0.9);
   box-shadow: 0 6px 6px rgba(49, 46, 56, 0.9);
 
   ${(props) => (props.fixBar ? 'position: fixed' : '')};
   ${(props) => (props.fixBar ? 'top: 0px' : '')};
   ${(props) => (props.fixBar ? 'left: 0px' : '')};
+  ${(props) => (props.fixBar ? 'right: 0px' : '')};
   ${(props) => (props.fixBar ? 'padding-top: 15px' : '')};
   ${(props) => (props.fixBar ? 'z-index:1' : '')};
 `

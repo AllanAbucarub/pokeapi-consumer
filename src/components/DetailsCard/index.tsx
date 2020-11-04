@@ -12,6 +12,7 @@ import {
   Stats,
   Title,
   Info,
+  StatsName,
   ProgressBar,
   Filler,
 } from './styles'
@@ -97,7 +98,7 @@ const DetailsCard: React.FC<IPokemon> = (pokemonDetails) => {
           <Title>Stats</Title>
           {stats.map((el, key) => (
             <Info key={key}>
-              {el.stat.name}
+              <StatsName>{el.stat.name}</StatsName>
               <ProgressBar>
                 <Filler percentage={(el.base_stat * 100) / maxPoints.current}>
                   {el.base_stat}/{maxPoints.current}

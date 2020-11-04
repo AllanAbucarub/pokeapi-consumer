@@ -1,15 +1,20 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+interface ILoading {
+  isLoading :boolean
+}
+
+export const Container = styled.div<ILoading>`
   display: flex;
   width: 100%;
   flex-flow: column;
   margin-top: 20px;
-  gap: 25px;
+  gap: 25px;  
+  
+  ${(props) => (props.isLoading ? 'align-items: center;' : '')};
 
   @media (max-width: 650px) {
-    width: 320px;
-    min-width: 300px;
+    width: 100vw;
   }
 `
 

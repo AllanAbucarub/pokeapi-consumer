@@ -43,18 +43,23 @@ export const Container = styled.div`
       white-space: nowrap;
     }
     ${Image} {
-      margin-left: 30px;
+      margin-left: 30px;      
     }
   } 
 
   @media (max-width: 350px) {
-
+    font-size: 1.1em;    
     ${Image} {
-      margin-left: unset;
+      margin-left: 15px;
+      width: 60px;
     }
 
     ${Title} {
-      margin: 0 0 0 15px;
+      margin-left:15px;      
     }
+  }
+
+  @media (max-width: 350px) {
+    font-size: 1em;  
   }
 `

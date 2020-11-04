@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const Container = styled.div`
   display: flex;
   height: 240px;
-  width: 320px;
+  max-width: 320px;
   background: #3e3b47;
   border-radius: 8px;
   flex-direction: column;
@@ -18,8 +18,8 @@ export const Container = styled.div`
     margin-top: 20px;
   }
 
-  @media (max-width: 340px) {
-    width: 100%;
+  @media (max-width: 320px) {
+    margin: 0 10px;
   }
 
   &:hover {
@@ -30,6 +30,8 @@ export const Container = styled.div`
 export const MyLink = styled(Link)`
   color: inherit;
   text-decoration: inherit;
+  width: 100%;
+  max-width: 320px;
 `
 
 export const PokeId = styled.h1`

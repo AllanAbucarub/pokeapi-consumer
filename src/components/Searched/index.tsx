@@ -1,6 +1,8 @@
 import React from 'react'
 import { IPokemon } from '../Card/interfaces/pokemon'
 
+import Loading from '../../components/utils/Loading'
+
 import Card from '../Card'
 
 interface Props {
@@ -23,7 +25,7 @@ const Searched: React.FC<Props> = ({ pokemon, error }) => {
   }
 
   if (pokemon === null) {
-    return <h3>Carregando...</h3>
+    return <Loading />
   }
 
   return <Card url={'/pokemon/' + pokemon?.id} />

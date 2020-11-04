@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect, useCallback, useRef } from 'react'
 
 import Card from '../Card'
 import Loading from '../utils/Loading'
@@ -21,6 +21,8 @@ const FamilyTree: React.FC<Props> = ({ id }) => {
   const [loadChain, evolutionChain] = api<IEvolutionChain>({
     method: 'get',
   })
+
+  const isLoadingFT = useRef(true);
 
   useEffect(() => {
     loadId({ url: `/pokemon-species/${id}/` })
@@ -56,9 +58,11 @@ const FamilyTree: React.FC<Props> = ({ id }) => {
 
   evolutionChain?.data && getEvolves(evolutionChain.data.chain, evolutions)
 
+  isLoadingFT.current = (evolutions.length <= 0)
+
   return (
-    <Container>
-      {evolutions.length ? (
+    <Container isLoading={isLoadingFT.current}>
+      {!isLoadingFT.current ? (
         <>
           <Title>Family Tree</Title>
           <Content>

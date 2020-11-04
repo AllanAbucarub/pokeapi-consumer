@@ -1,21 +1,9 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-type BarConfig = {
+type IBarConfig = {
   percentage: number
 }
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  padding: 30px 38px;
-
-  @media (max-width: 700px) {
-    padding: 10px 10px 30px 10px;
-  }
-`
 
 export const StyledLink = styled(Link)`
   display: flex;
@@ -24,18 +12,10 @@ export const StyledLink = styled(Link)`
   align-self: flex-start;
   font-size: 24px;
   color: #ff9000;
-  text-decoration: none;
+  text-decoration: none;  
 
   img {
     margin: 0 10px 0 5px;
-  }
-
-  @media (max-width: 700px) {
-    font-size: 20px;
-    img {
-      width: 24px;
-      height: 24px;
-    }
   }
 
   &:hover {
@@ -43,12 +23,38 @@ export const StyledLink = styled(Link)`
   }
 `
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  padding: 30px 38px;
+  position: relative;
+
+  @media (max-width: 700px) {
+    padding: 10px 10px 30px 10px;
+
+    ${StyledLink}{
+      margin-left: 28px;
+      font-size: 20px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      @media (max-width: 400px) {
+        margin-left: 0;
+      }
+    }
+  }
+  
+`
+
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 300px;
-  width: 320px;
+  max-width: 320px;
   height: 444px;
   background: #3e3b47;
   margin-top: 40px;
@@ -115,21 +121,26 @@ export const Title = styled.span`
 export const Info = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 280px;
+  width: 90%;
   font-size: 16px;
   color: #f4ede8;
   margin-bottom: 12px;
 `
 
+export const StatsName = styled.span`
+  width:15%;
+`;
+
 export const ProgressBar = styled.div`
   position: relative;
   height: 20px;
-  width: 241px;
+  width: 85%;
   border-radius: 50px;
   background: #c4c4c4;
+  margin-left: 10px;
 `
 
-export const Filler = styled.div<BarConfig>`
+export const Filler = styled.div<IBarConfig>`
   display: flex;
   font-size: 14px;
   color: #f4ede8;
