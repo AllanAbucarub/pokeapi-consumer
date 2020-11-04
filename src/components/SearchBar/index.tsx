@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react'
+import React, { ChangeEvent, useRef, useEffect } from 'react'
 import { Container, Search, Input } from './styles'
 
 import SearchIcon from '../../assets/images/search.svg'
@@ -9,14 +9,23 @@ interface Props {
   fixBar: boolean
 }
 
-const SearchBar: React.FC<Props> = React.memo(({ handleChange, typedText, fixBar }) => (
-  <Container fixBar={fixBar}>
-    <Search>
-      <img src={SearchIcon} alt="Ícone de busca" />
+const SearchBar: React.FC<Props> = React.memo(({ handleChange, typedText, fixBar }) => {
+  const inputSearch = useRef<HTMLInputElement>(null);
 
-      <Input type="text" placeholder="Type the Pokémon name" value={typedText} onChange={handleChange} />
-    </Search>
-  </Container>
-))
+useEffect(() => {
+  inputSearch.current?.focus()
+}, [])
+
+  return(
+    <Container fixBar={fixBar}>
+      <Search>
+        <img src={SearchIcon} alt="Ícone de busca" />
+
+        <Input ref={inputSearch} type="text" placeholder="Type the Pokémon name" value={typedText} onChange={handleChange} />
+      </Search>
+    </Container>
+  )
+  
+})
 
 export default SearchBar
