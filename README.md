@@ -50,5 +50,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ## :cloud: Demonstração da aplicação
 
 ![Heroku](https://heroku-badge.herokuapp.com/?app=pokeapi-consumer) 
-[pokeapi-consumer](https://pokeapi-consumer.herokuapp.com/)
+
+- [pokeapi-consumer](https://pokeapi-consumer.herokuapp.com/)
 
