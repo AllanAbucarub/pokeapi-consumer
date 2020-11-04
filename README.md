@@ -51,5 +51,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ![Heroku](https://heroku-badge.herokuapp.com/?app=pokeapi-consumer) 
 
-- [pokeapi-consumer](https://pokeapi-consumer.herokuapp.com/){:target="_blank" rel="noopener"}
+- [pokeapi-consumer](https://pokeapi-consumer.herokuapp.com/){:target="_blank"}
 
