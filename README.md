@@ -24,8 +24,9 @@ Se preferir o Yarn, que é um gerenciador de pacotes desenvolvido pelo Facebook,
 ## Instalação
 
 ##### Clone este repositório
+```
 $ git clone <https://github.com/AllanAbucarub/pokeapi-consumer>
-
+```
 ##### Acesse a pasta do projeto no terminal/cmd
 $ cd pokeapi-consumer
 
