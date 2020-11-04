@@ -8,7 +8,7 @@ Esta é uma aplicação que consome alguns dados da api [pokeapi.co](https://pok
 - [x] Busca de um Pokémon em específico
 - [x] Página de detalhes de um Pokémon e suas evoluções
 
-[![Heroku](https://heroku-badge.herokuapp.com/?app=pokeapi-consumer)]
+![Heroku](https://heroku-badge.herokuapp.com/?app=pokeapi-consumer)
 
 ## Pré-requisitos
 
