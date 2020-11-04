@@ -10,7 +10,7 @@ Esta é uma aplicação que consome alguns dados da api [pokeapi.co](https://pok
 
 ![Heroku](https://heroku-badge.herokuapp.com/?app=pokeapi-consumer)
 
-## Pré-requisitos
+:memo:## Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
