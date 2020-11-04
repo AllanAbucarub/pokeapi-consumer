@@ -16,8 +16,8 @@ const Searched: React.FC<Props> = ({ pokemon, error }) => {
     let isNotFound = err.indexOf('404') > -1
 
     isNotFound
-      ? (response = <h3>{`Pokémon not found `}</h3>)
-      : (response = <h3>{`Error trying to search servidor data. ` + error}</h3>)
+      ? response = <h3>{`Pokémon not found `}</h3>
+      : response = <h3>{`Error trying to search servidor data. ` + error}</h3>
 
     return response
   }
