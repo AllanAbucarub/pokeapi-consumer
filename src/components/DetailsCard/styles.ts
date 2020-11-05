@@ -46,8 +46,7 @@ export const Container = styled.div`
         margin-left: 0;
       }
     }
-  }
-  
+  }  
 `
 
 export const CardContainer = styled.div`
@@ -55,6 +54,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 320px;
+  min-width: 320px;
   height: 444px;
   background: #3e3b47;
   margin-top: 40px;
@@ -64,7 +64,12 @@ export const CardContainer = styled.div`
     width: 101px;
     height: 102px;
     margin-top: 17px;
+    margin-bottom: 5px;
   }
+
+  @media (max-width: 340px) {
+    min-width: 93vw;
+  }  
 `
 
 export const PokeId = styled.h1`
@@ -72,14 +77,18 @@ export const PokeId = styled.h1`
   align-self: flex-start;
   margin: 11px 0 0 17px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #666360;
 `
 
 export const Name = styled.span`
   font-weight: bold;
-  font-size: 28px;
+  font-size: 1.75rem;
   color: #ff9000;
+
+  @media (max-width: 340px) {
+    font-size: 1.4rem;
+  }
 `
 
 export const Attributes = styled.div`
@@ -88,18 +97,18 @@ export const Attributes = styled.div`
   justify-content: space-around;
   flex-flow: wrap;
   margin-top: 30px;
-  padding: 0 40px;
+  padding: 0;
 `
 
 export const Value = styled.span`
-  font-size: 24px;
+  font-size: 1.5rem;
   width: 50%;
   text-align: center;
   color: #f4ede8;
 `
 
 export const Label = styled.span`
-  font-size: 16px;
+  font-size: 1rem;
   align-items: center;
   color: #666360;
 `
@@ -113,7 +122,7 @@ export const Stats = styled.div`
 `
 
 export const Title = styled.span`
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #f4ede8;
   margin-bottom: 19px;
 `
@@ -122,7 +131,7 @@ export const Info = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
-  font-size: 16px;
+  font-size: 1rem;
   color: #f4ede8;
   margin-bottom: 12px;
 `

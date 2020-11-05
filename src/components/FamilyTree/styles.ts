@@ -9,7 +9,7 @@ export const Container = styled.div<ILoading>`
   width: 100%;
   flex-flow: column;
   margin-top: 20px;
-  gap: 25px;  
+  grid-gap: 25px;  
   
   ${(props) => (props.isLoading ? 'align-items: center;' : '')};
 
@@ -33,7 +33,7 @@ export const Title = styled.span`
 export const Content = styled.div`
   display: flex;
   flex-flow: row wrap;
-  gap: 38px;
+  grid-gap: 38px;
 
   @media (max-width: 780px) {
     justify-content: center;

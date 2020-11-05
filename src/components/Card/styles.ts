@@ -37,8 +37,7 @@ export const MyLink = styled(Link)`
 export const PokeId = styled.h1`
   position: absolute;
   align-self: flex-start;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
   color: #666360;
   margin: 12px 0 0 25px;
 `
@@ -56,6 +55,10 @@ export const CaptionName = styled.div`
   font-size: 1.5rem;
   margin-top: 10px;
   max-width: 85%;
+
+  @media (max-width: 340px) {
+    font-size: 1.2rem;
+  }
 `
 
 export const Name = styled.h1`
@@ -66,13 +69,25 @@ export const Name = styled.h1`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @media (max-width: 340px) {
+    font-size: 1.2rem;
+  }
 `
 
 export const CaptionType = styled(CaptionName)`
   font-size: 1.25rem;
   margin-top: 26px;
+
+  @media (max-width: 340px) {
+    font-size: 1.05rem;
+  }
 `
 
 export const Type = styled(Name)`
   font-size: 1.25rem;
+
+  @media (max-width: 340px) {
+    font-size: 1.05rem;
+  }
 `
